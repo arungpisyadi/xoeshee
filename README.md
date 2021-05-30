@@ -1,6 +1,6 @@
 # XOESHEE
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads][ico-downloads]][link-downloads]
+[![Latest Version on Packagist][ico-version]][https://packagist.org/packages/arungpisyadi/xoeshee]
+[![Total Downloads][ico-downloads]][https://packagist.org/packages/arungpisyadi/xoeshee]
 
 X-tra Ordinary Ecommerce Solution - Highly Customizable and Efficient Resource Engine.
 Take a look at [contributing.md](contributing.md) to see a to do list.
