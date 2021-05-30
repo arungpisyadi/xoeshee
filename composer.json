@@ -1,0 +1,51 @@
+{
+	"name": "arungpisyadi/xoeshee",
+	"description": "X-tra Ordinary Ecommerce Solution - Highly Customizable and Efficient Resource Engine.",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Arung Isyadi",
+			"email": "isyadiarung@gmail.com",
+			"homepage": "https://arungpisyadi.github.io"
+		}
+	],
+	"homepage": "https://github.com/arungpisyadi/xoeshee",
+	"keywords": [
+		"Laravel",
+		"ECommerce",
+		"Marketplace",
+		"B2B",
+		"Multi vendor",
+		"Xoeshee"
+	],
+	"require": {
+		"illuminate/support": "~7|~8"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "~9.0",
+		"orchestra/testbench": "~5|~6"
+	},
+	"autoload": {
+		"psr-4": {
+			"Arungpisyadi\\Xoeshee\\": "src/"
+		},
+        "files": [
+            "src/Helpers/Helpers.php"
+        ]
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Arungpisyadi\\Xoeshee\\Tests\\": "tests"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Arungpisyadi\\Xoeshee\\Providers\\XoesheeServiceProvider"
+			],
+			"aliases": {
+				"Xoeshee": "Arungpisyadi\\Xoeshee\\Facades\\Xoeshee"
+			}
+		}
+	}
+}
