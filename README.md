@@ -39,11 +39,6 @@ Please see [contributing.md](contributing.md) for details and a todolist.
 
 If you discover any security related issues, please email author email instead of using the issue tracker.
 
-## Credits
-
-- [author name][link-author]
-- [All Contributors][link-contributors]
-
 ## License
 
 license. Please see the [license file](license.md) for more information.
@@ -61,6 +56,8 @@ license. Please see the [license file](license.md) for more information.
 [link-contributors]: ../../contributors
 
 ## Credits and History
+- [SecTheater](https://github.com/SecTheater)
+
 This package is actually built based on [Marketplace](https://github.com/SecTheater/marketplace) package by [SecTheater](https://github.com/SecTheater) which was started as a forked solution on a project. Then, along the way I found that the package has several unfriendly and non-movable setup like how the users table needed to be modified and the users permission function that's a bit hard to modify. So, from forked repository I decided to rebuild the package with my knowledge thinking that this package would be needed to be a starting engine in any e-commerce projects by any developers in the world.
 
 The plan is to have this package packe with basic but customizable features, for example:
