@@ -19,7 +19,8 @@
 		"Xoeshee"
 	],
 	"require": {
-		"illuminate/support": "~7|~8"
+		"illuminate/support": "~7|~8",
+		"spatie/laravel-medialibrary": "^9.0.0"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~9.0",
@@ -41,7 +42,7 @@
 	"extra": {
 		"laravel": {
 			"providers": [
-				"Arungpisyadi\\Xoeshee\\Providers\\XoesheeServiceProvider"
+				"Arungpisyadi\\Xoeshee\\XoesheeServiceProvider"
 			],
 			"aliases": {
 				"Xoeshee": "Arungpisyadi\\Xoeshee\\Facades\\Xoeshee"

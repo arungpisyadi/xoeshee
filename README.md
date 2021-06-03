@@ -3,7 +3,6 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 
 X-tra Ordinary Ecommerce Solution - Highly Customizable and Efficient Resource Engine.
-Take a look at [contributing.md](contributing.md) to see a to do list.
 
 # REQUIREMENTS
 * PHP 7.3 or up.
@@ -20,6 +19,7 @@ $ composer require arungpisyadi/xoeshee
 ```
 
 ## Usage
+Go to [https://github.com/arungpisyadi/xoeshee/wiki](Wiki) for a complete documentation.
 
 ## Change log
 
