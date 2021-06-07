@@ -19,7 +19,7 @@ $ composer require arungpisyadi/xoeshee
 ```
 
 ## Usage
-Go to [Wiki](https://github.com/arungpisyadi/xoeshee/wiki) for a complete documentation.
+Go to [Wiki][link-wiki] for a complete documentation.
 
 ## Change log
 
@@ -54,6 +54,7 @@ license. Please see the [license file](license.md) for more information.
 [link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/arungpisyadi
 [link-contributors]: ../../contributors
+[link-wiki]: https://github.com/arungpisyadi/xoeshee/wiki
 
 ## Credits and History
 - [SecTheater](https://github.com/SecTheater)
