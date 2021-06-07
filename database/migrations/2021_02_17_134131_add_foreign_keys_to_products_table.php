@@ -14,8 +14,8 @@ class AddForeignKeysToProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->foreign('reviewed_by')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('CASCADE');
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreignId('approved_by')->constrained('users')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
         });
     }
 
@@ -27,8 +27,8 @@ class AddForeignKeysToProductsTable extends Migration
     public function down()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->dropForeign('products_reviewed_by_foreign');
-            $table->dropForeign('products_user_id_foreign');
+            $table->dropForeign(['approved_by']);
+            $table->dropForeign(['user_id']);
         });
     }
 }

@@ -15,10 +15,7 @@ class CreateProductVariationsTable extends Migration
     {
         Schema::create('product_variations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('product_id')->index('product_variations_product_id_foreign');
-            $table->unsignedBigInteger('product_variation_type_id')->index('product_variations_product_variation_type_id_foreign');
             $table->json('details')->nullable();
-            $table->integer('order')->nullable();
             $table->timestamps();
         });
     }

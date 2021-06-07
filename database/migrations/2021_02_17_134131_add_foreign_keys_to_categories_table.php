@@ -14,7 +14,8 @@ class AddForeignKeysToCategoriesTable extends Migration
     public function up()
     {
         Schema::table('categories', function (Blueprint $table) {
-            $table->foreign('parent_id')->references('id')->on('categories')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+            $table->foreignId('parent_id')->constrained('categories')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
         });
     }
 

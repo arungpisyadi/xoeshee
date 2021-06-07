@@ -2,6 +2,7 @@
 
 namespace Arungpisyadi\Xoeshee;
 
+use Arungpisyadi\Xoeshee\Commands\XoesheeInstall;
 use Illuminate\Support\ServiceProvider;
 
 class XoesheeServiceProvider extends ServiceProvider
@@ -77,6 +78,8 @@ class XoesheeServiceProvider extends ServiceProvider
         ], 'xoeshee.views');*/
 
         // Registering package commands.
-        // $this->commands([]);
+        $this->commands([
+            XoesheeInstall::class,
+        ]);
     }
 }

@@ -15,16 +15,10 @@ class CreateProductVariationTypesTable extends Migration
     {
         Schema::create('product_variation_types', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('product_id')->index('product_variation_types_product_id_foreign');
-            $table->string('name');
-            $table->longText('title')->nullable();
+            $table->string('title', 100)->default('primary')->nullable();
             $table->string('sku', 100)->nullable();
-            $table->integer('stock');
-            $table->double('price', 11, 2)->default(0.00);
-            $table->double('member_price', 11, 2)->default(0.00);
-            $table->double('discount_price', 11, 2)->default(0.00);
-            $table->double('unit_price', 11, 2)->default(0.00);
-            $table->double('purchase_price', 11, 2)->default(0.00);
+            $table->integer('stock', false)->default(0);
+            $table->float('price', 11, 2)->default(0.00);
             $table->timestamps();
         });
     }

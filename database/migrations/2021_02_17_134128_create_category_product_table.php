@@ -14,7 +14,7 @@ class CreateCategoryProductTable extends Migration
     public function up()
     {
         Schema::create('category_product', function (Blueprint $table) {
-            $table->unsignedInteger('category_id')->index();
+            $table->unsignedBigInteger('category_id')->index();
             $table->unsignedBigInteger('product_id')->index('category_product_product_id_foreign');
         });
     }

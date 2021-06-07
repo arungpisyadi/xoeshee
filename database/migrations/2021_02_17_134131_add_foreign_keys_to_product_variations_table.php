@@ -14,8 +14,8 @@ class AddForeignKeysToProductVariationsTable extends Migration
     public function up()
     {
         Schema::table('product_variations', function (Blueprint $table) {
-            $table->foreign('product_id')->references('id')->on('products')->onUpdate('RESTRICT')->onDelete('CASCADE');
-            $table->foreign('product_variation_type_id')->references('id')->on('product_variation_types')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreignId('product_id')->constrained('products')->after('id')->onDelete('cascade');
+            $table->foreignId('product_variation_type_id')->constrained('product_variation_types')->after('product_id')->onDelete('cascade');
         });
     }
 
@@ -27,8 +27,8 @@ class AddForeignKeysToProductVariationsTable extends Migration
     public function down()
     {
         Schema::table('product_variations', function (Blueprint $table) {
-            $table->dropForeign('product_variations_product_id_foreign');
-            $table->dropForeign('product_variations_product_variation_type_id_foreign');
+            $table->dropForeign(['product_id']);
+            $table->dropForeign(['product_variation_type_id']);
         });
     }
 }

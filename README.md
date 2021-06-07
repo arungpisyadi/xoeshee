@@ -19,7 +19,7 @@ $ composer require arungpisyadi/xoeshee
 ```
 
 ## Usage
-Go to [https://github.com/arungpisyadi/xoeshee/wiki](Wiki) for a complete documentation.
+Go to [Wiki](https://github.com/arungpisyadi/xoeshee/wiki) for a complete documentation.
 
 ## Change log
 

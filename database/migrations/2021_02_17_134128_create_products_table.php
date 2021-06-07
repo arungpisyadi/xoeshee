@@ -15,28 +15,16 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('photo')->nullable();
+            $table->string('code', 17)->nullable();
+            $table->string('title', 100)->nullable();
             $table->string('name')->unique();
-            $table->json('names')->nullable();
-            $table->string('sku', 100)->nullable();
-            $table->string('number', 17)->nullable();
-            $table->string('categorycode', 20)->nullable();
-            $table->json('categories')->nullable();
-            $table->boolean('licensed')->default(0);
-            $table->boolean('bulk')->default(0);
-            $table->json('tags')->nullable();
-            $table->string('location', 3)->nullable();
-            $table->json('description')->nullable();
-            $table->double('share', 8, 2)->default(0.00);
-            $table->string('share_type', 11)->nullable()->default('fixed');
-            $table->unsignedBigInteger('user_id')->index('products_user_id_foreign');
-            $table->unsignedInteger('brand_id')->nullable();
-            $table->date('reviewed_at')->nullable();
-            $table->unsignedBigInteger('reviewed_by')->nullable()->index('products_reviewed_by_foreign');
-            $table->timestamps();
-            $table->string('slug', 100)->nullable();
-            $table->string('status', 11)->nullable()->default('reviewed');
+            $table->longText('description')->nullable();
+            $table->longText('summary')->nullable();
+            $table->string('type', 20)->default('simple')->nullable()->comment('simple, variations');
+            $table->integer('stock', false)->default(0);
+            $table->tinyInteger('status', false)->default(0)->nullable()->comment('0 = inactive, 1 = active');
             $table->boolean('featured')->default(0);
+            $table->timestamps();
         });
     }
 
